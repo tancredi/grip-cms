@@ -1,0 +1,49 @@
+.sprite-icon (@x: 0, @y: 0, @sprite-img, @width: 14px, @height: 14px, @spacing: 0) {
+    .sprite(@x, @y, @sprite-img, @width, @height, @spacing);
+    .inline-block;
+    text-indent: 100%;
+    text-align: left;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+// ----------------------------------------------------------------------------
+// .icon-action
+// ----------------------------------------------------------------------------
+
+.icon-action (@index) {
+    .sprite-icon(@index, 0, '../../assets/sprites/icons-14x14.gif', 14px, 14px, 0);
+    margin-bottom: -1px;
+
+    &a:hover {
+        .sprite-icon(@index, 1, '../../assets/sprites/icons-14x14.gif', 14px, 14px, 0);
+    }
+}
+
+a:hover .icon-action {
+    background-position-y: -14px;
+}
+
+.icon-action-edit {
+    .icon-action(0);
+}
+
+.icon-action-delete {
+    .icon-action(1);
+}
+
+.icon-action-move-up {
+    .icon-action(2);
+}
+
+.icon-action-move-down {
+    .icon-action(3);
+}
+
+.icon-action-details {
+    .icon-action(4);
+}
+
+.icon-action-key {
+    .icon-action(5);
+}

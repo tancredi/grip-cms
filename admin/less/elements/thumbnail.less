@@ -1,0 +1,20 @@
+a img {
+    border: 0;
+}
+
+.thumbnail {
+    border: 1px solid @color-type-grey;
+}
+
+a.thumbnail {
+    border: 0;
+
+    img {
+        .thumbnail;
+        .transition(all, 0.2s);
+
+        &:hover {
+            border-color: @color-type-highlight;
+        }
+    }
+}

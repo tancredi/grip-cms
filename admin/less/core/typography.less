@@ -1,0 +1,104 @@
+html {
+    font-size: @type-root;
+}
+
+body {
+    color: @color-type-body;
+    .type-size(@type-size-body);
+    font-family: @type-face-body;
+}
+
+.type-size(@size) {
+    font-size: @size * 1px;
+    font-size: @size * 1rem / 10;
+}
+
+.type-padding-top(@value) {
+    padding-top: @value * 1px;
+    padding-top: @value * 1rem / 10;
+}
+
+.type-padding-bottom(@value) {
+    padding-bottom: @value * 1px;
+    padding-bottom: @value * 1rem / 10;
+}
+
+.type-margin-top(@value) {
+    margin-top: @value * 1px;
+    margin-top: @value * 1rem / 10;
+}
+
+.type-margin-bottom(@value) {
+    margin-bottom: @value * 1px;
+    margin-bottom: @value * 1rem / 10;
+}
+
+a {
+    color: @color-type-link;
+    font-weight: bold;
+    text-decoration: none;
+    .transition(.2s, color);
+
+    &:hover {
+        color: @color-type-link-hover;
+    }
+}
+
+hr {
+    border: 0;
+    height: 0;
+    margin: @base-module 0 @base-module 0;
+    border-bottom: @default-ruler-border;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: @type-face-header;
+    color: @color-type-header;
+    font-weight: 100;
+    margin-top: 0;
+    .text-shadow(fade(#000, 50%));
+
+    &.ruled {
+        border-bottom: @default-ruler-border;
+        .type-padding-bottom(20);
+    }
+}
+
+h1, .h1 {
+    .type-size(@type-size-h1);
+}
+
+h2, .h2 {
+    .type-size(@type-size-h2);
+}
+
+h3, .h3 {
+    .type-size(@type-size-h3);
+}
+
+h4, .h4 {
+    .type-size(@type-size-h4);
+}
+
+h5, .h5 {
+    .type-size(@type-size-h5);
+}
+
+h6, .h6 {
+    .type-size(@type-size-h6);
+}
+
+.h-ruled {
+    .inline-block;
+    margin-right: @base-module / 2;
+    padding-right: @base-module / 2;
+    border-right: 1px solid fade(#fff, 6%);
+    .shadow(1px, 0, 0, 0, fade(#000, 30%));
+}
+
+.v-ruled {
+    margin-bottom: @base-module / 2;
+    padding-bottom: @base-module / 2;
+    border-bottom: 1px solid fade(#fff, 6%);
+    .shadow(0, 1px, 0, 0, fade(#000, 30%));
+}

@@ -1,0 +1,28 @@
+.button-color(@base-color: @color-default-button) {
+    .inline-block();
+    padding: @base-module / 2;
+    margin-right: @base-module / 2;
+    .vertical-gradient(lighten(@base-color, 3%), darken(@base-color, 3%), @base-color);
+    .rounded-corners();
+    border: 1px solid darken(@base-color, 10%);
+    .inner-shadow(0, 0, 0, 1px, fade(#fff, 5%));
+    color: #fff;
+    text-decoration: none;
+    .text-shadow(darken(@base-color, 30%), 0, -1px);
+    font-weight: 100;
+    font-family: @type-face-components;
+    .type-size(@type-size-components);
+
+    &:hover {
+        .vertical-gradient(lighten(@base-color, 5%), @base-color, lighten(@base-color, 5%));
+        .inner-shadow(0, 0, 0, 1px, fade(#fff, 10%));
+    }
+}
+
+.button, button {
+    .button-color();
+}
+
+.cta {
+    .button-color(@color-cta);
+}

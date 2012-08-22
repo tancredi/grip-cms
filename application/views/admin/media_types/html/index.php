@@ -1,0 +1,1 @@
+<?php echo strip_tags((strlen($value) > 30) ? substr($value, 0, 27) . '..' : $value);?>

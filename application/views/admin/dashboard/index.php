@@ -1,0 +1,1 @@
+Welcome. Use the navigation bar to administrate Types.

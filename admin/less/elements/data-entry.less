@@ -1,0 +1,22 @@
+.data-entry {
+    padding: @base-module;
+    .vertical-gradient(fade(#333, 50%), fade(#222, 50%), fade(#232323, 50%));
+    margin-bottom: @base-module / 4;
+    .rounded-corners();
+    border: 1px solid #111;
+    .inner-shadow(0, 0, 0, 1px, fade(#fff, 5%));
+
+    .detail {
+        color: @color-type-grey;
+        font-style: italic;
+        .type-size(@type-size-small);
+    }
+
+    &:hover {
+        .vertical-gradient(fade(#343434, 50%), fade(#232323, 50%), fade(#333, 50%));
+
+        a {
+            color: @color-type-body;
+        }
+    }
+}

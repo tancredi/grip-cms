@@ -1,0 +1,111 @@
+// ----------------------------------------------------------------------------
+// variables > type
+// ----------------------------------------------------------------------------
+
+@type-root: 62.5%;
+@type-size-body: 13;
+@type-size-h1: 24;
+@type-size-h2: 20;
+@type-size-h3: 18;
+@type-size-h4: 16;
+@type-size-h5: 14;
+@type-size-h6: 12;
+@type-face-header: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+@type-face-body: Helvetica, Arial, sans-serif;
+@type-size-small: 12;
+@type-face-components: @type-face-header;
+@type-size-components: 13;
+@type-face-inputs: @type-face-components;
+@type-size-inputs: 15;
+@type-color-inputs: #444;
+
+// ----------------------------------------------------------------------------
+// variables > colors > general
+// ----------------------------------------------------------------------------
+
+@color-background: #141414;
+@color-default-ruler: #444;
+@color-highlight:#df1239;
+
+// ----------------------------------------------------------------------------
+// variables > colors > type
+// ----------------------------------------------------------------------------
+
+@color-type-body: #fff;
+@color-type-header: #fff;
+@color-type-grey-darker: #222;
+@color-type-grey-dark: #444;
+@color-type-grey: #aaa;
+@color-type-link: @color-type-highlight;
+@color-type-highlight: desaturate(lighten(@color-highlight, 10%), 10%);
+@color-type-link-hover: #fff;
+@color-type-error: #db3913;
+
+// ----------------------------------------------------------------------------
+// variables > colors > buttons
+// ----------------------------------------------------------------------------
+
+@color-default-button: #333;
+@color-cta: @color-highlight;
+
+// ----------------------------------------------------------------------------
+// variables > layout
+// ----------------------------------------------------------------------------
+
+@base-module: 20px;
+@page-max-width: 940px;
+@page-min-width: 320px;
+@page-padding: @base-module;
+@body-padding: @base-module / 2;
+
+// ----------------------------------------------------------------------------
+// variables > decorators
+// ----------------------------------------------------------------------------
+
+@base-radius: @base-module / 4;
+@default-ruler-border: 1px dashed @color-default-ruler;
+
+// ----------------------------------------------------------------------------
+// imports > utils
+// ----------------------------------------------------------------------------
+
+@import 'utils/css3';
+@import 'utils/display';
+@import 'utils/sprite';
+@import 'utils/clearfix';
+
+// ----------------------------------------------------------------------------
+// imports > core
+// ----------------------------------------------------------------------------
+
+@import 'core/layout';
+@import 'core/typography';
+
+// ----------------------------------------------------------------------------
+// imports > elements
+// ----------------------------------------------------------------------------
+
+@import 'elements/buttons';
+@import 'elements/form';
+@import 'elements/data-entry';
+@import 'elements/entries-list';
+@import 'elements/data-table';
+@import 'elements/error';
+@import 'elements/icon';
+@import 'elements/pagination';
+@import 'elements/data-display';
+@import 'elements/modal';
+@import 'elements/tooltip';
+@import 'elements/loader';
+@import 'elements/thumbnail';
+@import 'elements/audio-player';
+@import 'elements/login-form';
+@import 'elements/multi-select';
+
+// ----------------------------------------------------------------------------
+// imports > field-modules
+// ----------------------------------------------------------------------------
+
+@import 'field-modules/file-uploader';
+
+// ----------------------------------------------------------------------------

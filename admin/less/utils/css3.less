@@ -1,0 +1,52 @@
+.rounded-corners(@radius: @base-radius) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.rounded-corners-custom(@topleft: @base-radius, @topright: @base-radius, @bottomleft: @base-radius, @bottomright: @base-radius) {
+    -webkit-border-radius: @topleft @topright @bottomright @bottomleft;
+    -moz-border-radius: @topleft @topright @bottomright @bottomleft;
+    border-radius: @topleft @topright @bottomright @bottomleft;
+}
+
+.shadow(@x: 0, @y: 0, @blur: 3, @spread: 0, @color: rgba(0, 0, 0, .5)) {
+    -webkit-box-shadow: @x @y @blur @spread @color;
+    -moz-box-shadow: @x @y @blur @spread @color;
+    box-shadow: @x @y @blur @spread @color;
+}
+
+.no-shadow() {
+    -webkit-box-shadow: 0 0 0 0 fade(#fff, 0%);
+    -moz-box-shadow: 0 0 0 0 fade(#fff, 0%);
+    box-shadow: 0 0 0 0 fade(#fff, 0%);
+}
+
+.inner-shadow(@x: 0, @y: 0, @blur: 3, @spread: 0, @color: rgba(0, 0, 0, .5)) {
+    -webkit-box-shadow: inset @x @y @blur @spread @color;
+    -moz-box-shadow: inset @x @y @blur @spread @color;
+    box-shadow: inset @x @y @blur @spread @color;
+}
+
+.text-shadow(@color: rgba(0, 0, 0, .5), @x: -1px, @y: 1px) {
+    text-shadow: @x @y @color;
+}
+
+.no-text-shadow() {
+    text-shadow: 0 0 transparent;
+}
+
+.transition(@prop: all, @time: .5s, @ease: ease-in-out) {
+    -webkit-transition: @prop @time @ease;
+    -moz-transition: @prop @time @ease;
+    -o-transition: @prop @time @ease;
+    -ms-transition: @prop @time @ease;
+    transition: @prop @time @ease;
+}
+
+.vertical-gradient(@start: #000, @stop: #FFF, @falloff: #666) {
+    background: @falloff (@start + @stop) / 2;
+    background: @falloff -webkit-gradient(linear, left top, left bottom, from(@start), to(@stop));
+    background: @falloff -moz-linear-gradient(center top, @start 0%, @stop 100%);
+    background: @falloff -moz-gradient(center top, @start 0%, @stop 100%);
+}

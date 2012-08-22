@@ -1,0 +1,74 @@
+.data-table-wrapper {
+    border: 1px solid #111;
+    position: relative;
+    .rounded-corners(@base-module / 3);
+    overflow: hidden;
+    background: fade(#fff, 3%);
+    .inner-shadow(0, 0, 0, 1px, #333);
+
+    table, .data-table {
+        padding: 0;
+        border-collapse: collapse;
+        width: 100%;
+
+        tbody, thead {
+            width: 100%;
+        }
+
+        td, th {
+            margin: 0;
+            padding: @base-module;
+            border-right: 1px solid #333;
+            .shadow(2px, 0, 0, 0, #222);
+            text-align: center;
+
+            &:last-child {
+                border: 0;
+                .no-shadow();
+            }
+       }
+
+       tr {
+            border-bottom: 1px solid #333;
+       }
+
+       tbody tr:last-child {
+            border: 0;
+            .no-shadow();
+        }
+    }
+
+    .pre-fill {
+        color: @color-type-grey;
+        font-style: italic;
+    }
+
+    .thumbnail {
+        
+        img {
+            margin: -14px 0 -14px 0;
+            position: relative;
+            top: -3px;
+        }
+    }
+
+    th {
+        color: @color-type-highlight;
+
+        a.selected {
+            color: @color-type-body;
+        }
+    }
+
+    table.with-actions {
+
+        tr td:last-child {
+            width: 240px;
+            padding: @base-module / 2 0;
+
+            .button {
+                float: right;
+            }
+        }
+    }
+}

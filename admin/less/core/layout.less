@@ -1,0 +1,101 @@
+body {
+    background: @color-background;
+    margin: 0;
+    padding: @body-padding;
+}
+
+.section {
+    min-width: @page-min-width - @page-padding;
+    max-width: @page-max-width;
+    padding: @page-padding;
+    margin: 0 auto @base-module / 2 auto;
+    .rounded-corners();
+    background: #222;
+    border: 1px solid #000;
+    .inner-shadow(0, 0, 0, 1px, #333);
+}
+
+.page {
+    .section;
+}
+
+.navigation {
+    padding: 12px;
+    .rounded-corners(@base-radius);
+    background: #252525;
+    padding: 3px;
+    margin: 0;
+    margin-bottom: @base-module;
+
+    ul {
+        .vertical-gradient(fade(#333, 50%), fade(#222, 50%), fade(#232323, 50%));
+        margin-bottom: @base-module / 4;
+        .rounded-corners();
+        border: 1px solid #111;
+        .inner-shadow(0, 0, 0, 1px, fade(#fff, 5%));
+        margin: 0;
+        padding: 0;
+        .inline-block;
+        .clearfix;
+        list-style: none;
+        margin-bottom: -3px;
+
+        li {
+            float: left;
+
+            &.selected, &.selected:hover {
+                .vertical-gradient(darken(@color-type-highlight, 5%), @color-type-highlight);
+
+                a {
+                    color: #222;
+                    .text-shadow(fade(#fff, 10%));
+                }
+
+                &:first-child {
+                    .rounded-corners-custom(@base-radius, 0, @base-radius, 0);
+                }
+
+                &:last-child {
+                    .rounded-corners-custom(0, @base-radius, 0, @base-radius);
+                }
+            }
+
+            a {
+                .inline-block;
+                color: @color-type-grey;
+                font-weight: 100;
+                .text-shadow(#222);
+                padding: (@base-module - @base-module / 3) @base-module / 2;
+                padding-right: 0;
+            }
+
+            &:not(:last-child) {
+                .h-ruled;
+                margin: 0;
+            }
+
+            &:last-child {
+                padding-right: @base-module / 2;
+            }
+
+            &:hover {
+                .vertical-gradient(fade(#222, 50%), fade(#333, 50%), fade(#232323, 50%));
+            }
+        }
+    }
+}
+
+&.user-info {
+    float: right;
+    margin: @base-module / 2 + 3px @base-module 0;
+
+    :after {
+        content: '';
+    }
+}
+
+.logo {
+    width: 149px;
+    height: 43px;
+    background: url('../../assets/logo/header-small.png') center center no-repeat;
+}

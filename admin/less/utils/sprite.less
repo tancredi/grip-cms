@@ -1,0 +1,6 @@
+.sprite (@x, @y, @sprite-img, @width, @height, @spacing) {
+    background-image: url("@{sprite-img}");
+    width: @width - (@spacing * 2);
+    height: @height - (@spacing * 2);
+    background-position: -(@width * @x + @spacing) -(@height * @y + @spacing);
+}
